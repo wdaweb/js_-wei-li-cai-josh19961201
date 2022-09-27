@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>威力彩練習</title>
+  </head>
+  <body>
+    <script>
+      const PC = () => {
+        const rand = (min, max) => {
+          return Math.round(Math.random() * (max - min) + min);
+        };
+        const arr = [];
+        for (let i = 0; i < 6; i++) {
+          const aeraA = rand(1, 38);
+          if (arr.includes(aeraA)) {
+            i--;
+          } else {
+            arr.push(aeraA);
+          }
+        }
+
+        const aeraB = rand(1, 8);
+        arr.push(aeraB);
+
+        return arr;
+      };
+
+      document.write(PC());
+    </script>
+  </body>
+</html>
